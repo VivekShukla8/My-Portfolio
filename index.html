@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vivek Shukla Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Modern Cursive Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Great+Vibes&family=Satisfy&family=Shadows+Into+Light&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   GLOBAL STYLES
+======================================*/
+
+body {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 1.8rem;
+}
+
+/*======================================
+//--//-->   HERO SECTION - FIXED
+======================================*/
+
+#home-section {
+  padding-top: 120px; /* Fixed navbar overlap issue */
+  min-height: 100vh;
+}
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  margin: 0.5rem 0 1.5rem 0;
+  border-radius: 10px;
+  height: 8px;
+  background: rgba(102, 126, 234, 0.15);
+  overflow: hidden;
+}
+
+.skill-mf .progress .progress-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-mf span {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #667eea;
+  min-height: 50px;
+  display: inline-block;
+}
+
+.ftco-footer-social {
+  position: relative;
+  z-index: 20;
+}
+
+.ftco-footer-social li a {
+    color: #ffffff !important; /* Forces icons to white */
+    background: rgba(255, 255, 255, 0.1); /* Adds a slight circle background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.normal-txt {
+    color: #d0d0d0; /* Makes "Connect with me" light gray */
+    margin-right: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact-section .ftco-footer-social a {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+}
+
+
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+/* Tech stack icons styling */
+.tech-stack {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.tech-stack-label {
+  font-weight: 700;
+  color: #667eea;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  font-family: 'Caveat', cursive;
+  letter-spacing: 0.5px;
+}
+
+.tech-icon {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tech-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(145deg, #667eea, #764ba2);
+}
+
+.tech-icon:active {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+  }
+}
+
+.tech-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+
+.tech-icon:hover img {
+  filter: brightness(1.2);
+}
+
+.tech-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-icon:hover::before {
+  opacity: 1;
+}
+
+/* Hero Section Enhancements - COMPACT SIZE */
+.hero .one-forth {
+  position: relative;
+  overflow: visible !important;
+}
+
+.animated-visual-box {
+  position: relative;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Animated Geometric Pattern */
+.geometric-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.geometric-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: float 20s infinite ease-in-out;
+  opacity: 0.25;
+}
+
+.shape1 {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.shape2 {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 5s;
+  box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+}
+
+.shape3 {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  top: 40%;
+  left: 5%;
+  animation-delay: 10s;
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.shape4 {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  top: 55%;
+  right: 15%;
+  animation-delay: 7s;
+  box-shadow: 0 0 20px rgba(67, 233, 123, 0.3);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(25px, -25px) scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9) rotate(180deg);
+  }
+  75% {
+    transform: translate(30px, 10px) scale(1.05) rotate(270deg);
+  }
+}
+
+/* Animated Grid Background */
+.grid-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(102, 126, 234, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102, 126, 234, 0.06) 1px, transparent 1px);
+  background-size: 15px 15px;
+  animation: gridMove 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(15px, 15px);
+  }
+}
+
+/* Floating Particles */
+.particle {
+  position: absolute;
+  background: rgba(102, 126, 234, 0.7);
+  border-radius: 50%;
+  animation: particleFloat 15s infinite ease-in-out;
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+.particle1 {
+  width: 2px;
+  height: 2px;
+  top: 20%;
+  right: 25%;
+  animation-delay: 0s;
+}
+
+.particle2 {
+  width: 1.5px;
+  height: 1.5px;
+  top: 60%;
+  left: 40%;
+  animation-delay: 3s;
+}
+
+.particle3 {
+  width: 2.5px;
+  height: 2.5px;
+  top: 40%;
+  right: 30%;
+  animation-delay: 6s;
+}
+
+.particle4 {
+  width: 2px;
+  height: 2px;
+  top: 75%;
+  right: 10%;
+  animation-delay: 9s;
+}
+
+.particle5 {
+  width: 2px;
+  height: 2px;
+  top: 10%;
+  left: 20%;
+  animation-delay: 12s;
+}
+
+.particle6 {
+  width: 1.5px;
+  height: 1.5px;
+  top: 85%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) translateX(25px);
+    opacity: 0;
+  }
+}
+
+/* Code Brackets Animation */
+.code-brackets {
+  position: absolute;
+  font-size: 35px;
+  font-weight: 300;
+  color: rgba(102, 126, 234, 0.08);
+  font-family: 'Caveat', cursive;
+  animation: fadeInOut 8s infinite;
+  z-index: 1;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.bracket-left {
+  top: 5%;
+  right: 8%;
+  animation-delay: 0s;
+}
+
+.bracket-right {
+  bottom: 8%;
+  left: 12%;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { 
+    opacity: 0.05; 
+    transform: scale(1) rotate(0deg); 
+  }
+  50% { 
+    opacity: 0.1; 
+    transform: scale(1.02) rotate(2deg); 
+  }
+}
+
+/* Glowing Orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.18;
+  animation: glowPulse 6s infinite ease-in-out;
+  z-index: 1;
+}
+
+.orb1 {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #667eea 0%, transparent 70%);
+  top: 25%;
+  right: 20%;
+  animation-delay: 0s;
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+}
+
+.orb2 {
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #f093fb 0%, transparent 70%);
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 2s;
+  box-shadow: 0 0 15px rgba(240, 147, 251, 0.4);
+}
+
+.orb3 {
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle, #4facfe 0%, transparent 70%);
+  top: 55%;
+  right: 35%;
+  animation-delay: 4s;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.18;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+}
+
+/* Circuit Lines */
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
+  height: 1px;
+  width: 45px;
+  animation: circuitMove 8s linear infinite;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(102, 126, 234, 0.5);
+}
+
+.circuit1 {
+  top: 20%;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.circuit2 {
+  top: 50%;
+  left: 0;
+  animation-delay: 3s;
+  width: 60px;
+}
+
+.circuit3 {
+  top: 70%;
+  left: 0;
+  animation-delay: 5s;
+  width: 40px;
+}
+
+@keyframes circuitMove {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Tech Icons Floating */
+.floating-icon {
+  position: absolute;
+  font-size: 12px;
+  opacity: 0.08;
+  animation: iconFloat 12s infinite ease-in-out;
+  z-index: 1;
+  color: #667eea;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+  font-family: 'Caveat', cursive;
+}
+
+.icon1 {
+  top: 18%;
+  right: 30%;
+  animation-delay: 0s;
+}
+
+.icon2 {
+  top: 63%;
+  left: 18%;
+  animation-delay: 4s;
+}
+
+.icon3 {
+  top: 43%;
+  right: 12%;
+  animation-delay: 8s;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+/* About Section Image Enhancements */
+.about-img img {
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+  position: relative;
+  border-radius: 15px;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+  border-color: #667eea;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Progress Bar Animations */
+.progress {
+  position: relative;
+  overflow: visible !important;
+}
+
+.progress-bar {
+  animation: progressAnimation 2s ease-out;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes progressAnimation {
+  from { width: 0%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Project Cards Enhancement - NO BORDERS OR COLORED BACKGROUNDS */
+.blog-entry {
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.3);
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+
+.blog-entry .text {
+  padding: 12px 0;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+
+
+
+.blog-entry:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  outline: none;
+}
+
+.blog-entry a,
+.blog-entry a:focus,
+.blog-entry a:active {
+  outline: none;
+}
+
+.blog-entry .block-20 {
+  outline: none;
+}
+
+.blog-entry .block-20:focus {
+  outline: none;
+}
+
+.blog-entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.blog-entry:hover::before {
+  left: 100%;
+}
+
+
+/* Project title */
+
+/* Remove cursive font from project titles */
+#project-section .heading,
+#project-section .heading a {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+
+
+/* Button Hover Effects */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Floating Animation for Social Icons */
+.ftco-footer-social li {
+  animation: socialFloat 3s ease-in-out infinite;
+}
+
+.ftco-footer-social li:nth-child(1) { animation-delay: 0s; }
+.ftco-footer-social li:nth-child(2) { animation-delay: 0.2s; }
+.ftco-footer-social li:nth-child(3) { animation-delay: 0.4s; }
+.ftco-footer-social li:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes socialFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Heading Underline Animation */
+.heading-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.heading-section h2::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 10px auto 0;
+  transition: width 0.5s ease;
+  border-radius: 2px;
+}
+
+.heading-section:hover h2::after {
+  width: 100px;
+}
+
+/* Contact Box Hover Effect */
+.contact-info .box {
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #050505, #141414);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+}
+
+.contact-info .box:hover {
+  transform: scale(1.05);
+
+  /* brighter version of the same gradient */
+  background: linear-gradient(145deg, #0a0a0a, #1c1c1c);
+
+  /* border stays dark, just slightly stronger */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.contact-info .box p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+.contact-info .icon {
+  transition: all 0.3s ease;
+  color: #667eea;
+}
+
+.contact-info .box:hover .icon {
+  transform: rotateY(360deg);
+}
+
+/* Section Backgrounds */
+.ftco-section {
+  padding: 4em 0; /* reduced from default */
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.ftco-about {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 3.5em 0;
+}
+
+/* Navbar */
+.ftco_navbar {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Big Headings */
+.big {
+  font-family: 'Dancing Script', cursive;
+  color: rgba(102, 126, 234, 0.08);
+  font-weight: 700;
+}
+
+.big-2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.big-4 {
+  font-family: 'Caveat', cursive;
+}
+
+/* Text styling */
+.text h1 {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
+
+.text h1 span {
+  font-family: 'Pacifico', cursive;
+}
+
+.subheading {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Resume wrap styling */
+.resume-wrap {
+  background: linear-gradient(145deg, #050505, #141414);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 2rem;
+  opacity: 0.9;
+}
+
+.resume-wrap h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+}
+
+.resume-wrap .date {
+  font-family: 'Satisfy', cursive;
+}
+
+.resume-wrap .position {
+  font-family: 'Caveat', cursive;
+}
+
+/* Footer */
+.ftco-footer {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* Reduce spacing for hero text */
+.hero .text h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hero .text .subheading {
+  margin-bottom: 5px;
+}
+
+.hero .text h1 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* ============================================
+   CINEMATIC HYBRID HERO EFFECT - UPDATED
+   ============================================ */
+.cinematic-box {
+  position: relative;
+  height: 400px;
+  width: 140%; /* Extends beyond container to the right */
+  margin-left: -5%; /* Slight left offset for positioning */
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.5) 0%, rgba(26, 26, 26, 0.5) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Fade effect on the left edge blending into background */
+.cinematic-box::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(to right, #000, transparent);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Ensure parent allows overflow to be visible */
+.hero .one-forth .col-md {
+  overflow: visible !important;
+}
+
+.hero .text {
+  margin-top: 420px; /* adjust value if needed */
+}
+
+.featured-project {
+  position: relative;
+}
+
+.featured-star {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  font-size: 1.4rem; /* bigger star */
+
+  color: #facc15; /* gold */
+
+  text-shadow: 0 0 8px rgba(250,204,21,0.6);
+
+  background: rgba(250,204,21,0.08);
+  padding: 6px 10px;
+  border-radius: 50%;
+
+  backdrop-filter: blur(6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #home-section {
+    padding-top: 80px;
+  }
+  
+  .animated-visual-box {
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  .grid-background,
+  .glow-orb,
+  .geometric-shape,
+  .particle {
+    animation: none;
+  }
+}
+
+/* FORCE FOOTER SOCIAL ICONS TO BE VISIBLE */
+.ftco-footer-social .ftco-animate {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+
+/* ===== FOOTER SOCIAL ICON COLORS ===== */
+
+/* Default icon state */
+.ftco-footer-social li a {
+  background: rgba(255, 255, 255, 0.12);   /* circle background */
+  color: #e5e7eb !important;              /* icon color (light gray) */
+  transition: all 0.3s ease;
+}
+
+/* Hover state */
+.ftco-footer-social li a:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* gradient bg */
+  color: #ffffff !important;                              /* icon turns white */
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.45);
+}
+
+/* Optional: active (click) effect */
+.ftco-footer-social li a:active {
+  transform: scale(0.95);
+}
+
+
+/* Education section */
+.resume-wrap p,
+.resume-wrap span,
+.resume-wrap .position {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vivek Shukla</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	 <section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+
+          <div class="one-forth d-flex align-items-center ftco-animate">
+            <div class="row w-100 align-items-center" style="overflow: visible;">
+
+              <!-- Intro Text Column -->
+              <div class="col-md-9">
+                <div class="text" style="position: relative; z-index: 5;">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Vivek Shukla</span></h1>
+
+                  <span id="typing-animation"></span>
+
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = ['Full-Stack Developer', 'MERN Specialist', 'Problem Solver'];
+                    let currentTextIndex = 0;
+                    let currentCharIndex = 0;
+                    let isDeleting = false;
+
+                    function type() {
+                      const currentText = typingTexts[currentTextIndex];
+                      
+                      if (isDeleting) {
+                        typingAnimationElement.textContent = currentText.substring(0, currentCharIndex - 1);
+                        currentCharIndex--;
+                      } else {
+                        typingAnimationElement.textContent = currentText.substring(0, currentCharIndex + 1);
+                        currentCharIndex++;
+                      }
+
+                      let typeSpeed = isDeleting ? 50 : 100;
+
+                      if (!isDeleting && currentCharIndex === currentText.length) {
+                        typeSpeed = 2000;
+                        isDeleting = true;
+                      } else if (isDeleting && currentCharIndex === 0) {
+                        isDeleting = false;
+                        currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+                        typeSpeed = 500;
+                      }
+
+                      setTimeout(type, typeSpeed);
+                    }
+
+                    type();
+                  </script>
+
+                  <h3>Building scalable, production-ready web applications with modern technologies</h3>
+
+                  <p>
+                    <a href="https://www.linkedin.com/in/vivek-shukla-40b05a258/"
+                       class="btn btn-primary py-3 px-4" target="_blank">
+                      LinkedIn
+                    </a>
+
+                    <a href="https://github.com/VivekShukla8"
+                       class="btn btn-white btn-outline-white py-3 px-4 ml-3"
+                       target="_blank">
+                      My works
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Animated Visual Column -->
+              <div class="col-md">
+                <div class="animated-visual-box cinematic-box">
+
+                  <div class="grid-background"></div>
+
+                  <div class="geometric-pattern">
+                    <div class="geometric-shape shape1"></div>
+                    <div class="geometric-shape shape2"></div>
+                    <div class="geometric-shape shape3"></div>
+                    <div class="geometric-shape shape4"></div>
+                  </div>
+
+                  <div class="glow-orb orb1"></div>
+                  <div class="glow-orb orb2"></div>
+                  <div class="glow-orb orb3"></div>
+
+                  <div class="particle particle1"></div>
+                  <div class="particle particle2"></div>
+                  <div class="particle particle3"></div>
+                  <div class="particle particle4"></div>
+                  <div class="particle particle5"></div>
+                  <div class="particle particle6"></div>
+
+                  <div class="circuit-line circuit1"></div>
+                  <div class="circuit-line circuit2"></div>
+                  <div class="circuit-line circuit3"></div>
+
+                  <div class="code-brackets bracket-left">&lt;</div>
+                  <div class="code-brackets bracket-right">/&gt;</div>
+
+                  <div class="floating-icon icon1">{ }</div>
+                  <div class="floating-icon icon2">&lt;/&gt;</div>
+                  <div class="floating-icon icon3">&#123;&#125;</div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Vivek Shukla</span></p>
+										<p><span class="title-s">Role: </span> <span>Full-Stack Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>2+ Years Projects</span></p>
+										<p><span class="title-s">Location: </span> <span>Chandigarh, India</span></p>
+									  </div>
+									</div>
+								  </div><br>
+
+								<div class="skill-mf">
+									<p class="title-s">Technical Skills</p>
+									
+									<span>MERN Stack (MongoDB, Express, React, Node.js)</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>JavaScript & TypeScript</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>RESTful APIs & WebSocket</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>Database Design & Optimization</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>Git, CI/CD & Deployment</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Final-year Electrical Engineering student at Punjab Engineering College with a passion for building full-stack web applications. I specialize in the MERN stack and have hands-on experience developing production-grade systems used by real users.</p>
+								
+								<p>My projects demonstrate expertise in authentication systems, payment integrations, real-time communication, cloud storage, and scalable architecture. I've built platforms that handle live video streaming, tournament management with payment processing, and e-commerce workflows—all deployed and tested in real-world scenarios.</p>
+								
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Specialization:</span> <span>Full-Stack MERN Development</span></li>
+									<li class="d-flex"><span>Technologies:</span> <span>React, Node.js, Express, MongoDB</span></li>
+									<li class="d-flex"><span>Languages:</span> <span>English, Hindi</span></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p><a href="https://www.linkedin.com/in/vivek-shukla-40b05a258/" class="btn btn-primary py-3 px-3" target="_blank">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> Passionate about creating innovative and user-friendly web applications, I continually seek to expand my skills and stay updated with the latest technologies.</p>
+            <div class="mt-4">
+    				<a href="https://drive.google.com/file/d/1ldKgCOtr-QhnPGtjqRYD6ImzbdH9PHYm/view?usp=sharing" class="btn btn-primary py-3 px-5" target="_blank">Download Resume</a>
+    			</div>
+          </div>
+        </div>
+
+		
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>Bachelor of Technology</h2>
+    					<span class="position">Punjab Engineering College, Chandigarh</span>
+    					<p class="mt-4">CGPA: <b>7.5/10</b> (upto 7th Sem)</p>
+              <p>Branch: <b>Electrical Engineering</b></p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2021</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Govt. Adarsh High. Sec. School</span>
+    					<p class="mt-4">Score: <b>96.2%</b></p>
+              <p>Subjects: <b>Physics, Chemistry, Mathematics</b></p>
+    				</div>
+				</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Some of my Web Development Projects.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end featured-project">
+              <a href="https://stream-vault-frontend1.vercel.app/#/" class="block-20 zoom-effect" target="_blank" style="background-image: url('images/Stream.png');">
+              </a>
+              <div class="text mt-3 float-right d-block p-3">
+                <span class="featured-star">★</span>
+
+                <h3 class="heading"><a href="https://github.com/VivekShukla8/StreamVault-Frontend" target="_blank">Stream-Vault Video Streaming Website</a></h3>
+                <p>Full-stack video streaming platform enabling real-time uploads, WebRTC live broadcasting, and interactive communication. Implemented JWT authentication, Cloudinary media storage, REST APIs, Socket.io chat, and social features powered by MongoDB aggregation. Built analytics dashboards with secure, high-performance backend architecture.</p>
+                <div class="tech-stack">
+                  <span class="tech-stack-label">Tech Stack:</span>
+                  <span class="tech-icon" title="React">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                  </span>
+                  <span class="tech-icon" title="Node.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                  </span>
+                  <span class="tech-icon" title="Express.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+                  </span>
+                  <span class="tech-icon" title="MongoDB">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                  </span>
+                  <span class="tech-icon" title="Socket.io">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket.io">
+                  </span>
+                  <span class="tech-icon" title="Cloudinary">
+                    <img src="https://res.cloudinary.com/demo/image/upload/c_scale,w_28/cloudinary_icon.png" alt="Cloudinary">
+                  </span>
+                  <span class="tech-icon" title="Tailwind CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/VivekShukla8/UnitedAirlines" class="block-20 zoom-effect" target="_blank" style="background-image: url('images/United.png');">
+              </a>
+              <div class="text mt-3 float-right d-block p-3">
+
+                <h3 class="heading"><a href="https://github.com/VivekShukla8/UnitedAirlines" target="_blank">Flight Difficulty Score System</a></h3>
+                <p>Real-time aviation analytics system developed for operational decision support using a weighted scoring algorithm across six flight parameters. Built a MERN dashboard with Recharts and Ant Design, processing 8K+ records via CSV pipelines and optimized APIs for large-scale trend analysis.</p>
+                <div class="tech-stack">
+                  <span class="tech-stack-label">Tech Stack:</span>
+                  <span class="tech-icon" title="React">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                  </span>
+                  <span class="tech-icon" title="Node.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                  </span>
+                  <span class="tech-icon" title="Express.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+                  </span>
+                  <span class="tech-icon" title="MongoDB">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                  </span>
+                  <span class="tech-icon" title="Ant Design">
+                    <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" alt="Ant Design">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://swadeshistore.onrender.com/" class="block-20 zoom-effect" target="_blank" style="background-image: url('images/E-Commerce.png');">
+			</a>
+			<div class="text mt-3 float-right d-block p-3">
+
+			  <h3 class="heading "><a href="https://github.com/VivekShukla8/E-Commerce-" target="_blank">E-Commerce Platform</a></h3>
+			  <p>Production-style full-stack e-commerce application with product catalog, secure checkout, and order workflow. Implemented JWT authentication, Razorpay payment integration, role-based access control, and optimized MongoDB schemas with real-time transaction handling.</p>
+			  <div class="tech-stack">
+			    <span class="tech-stack-label">Tech Stack:</span>
+				<span class="tech-icon" title="React">
+				  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+				</span>
+				<span class="tech-icon" title="Node.js">
+				  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+				</span>
+				<span class="tech-icon" title="Express.js">
+				  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+				</span>
+				<span class="tech-icon" title="MongoDB">
+				  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+				</span>
+				<span class="tech-icon" title="Razorpay">
+				  <img src="https://avatars.githubusercontent.com/u/7713209?s=280&v=4" alt="Razorpay">
+				</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		  
+        </div>
+		<br>
+		<!-- NEW PROJECT - AIM ARCADE -->
+		<div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://aim-arcade-blun.vercel.app/" class="block-20 zoom-effect" style="background-image: url('images/Aim-Arcade.png'); background-color: #1a1a2e; background-size: cover; background-position: center;">
+              </a>
+              <div class="text mt-3 float-right d-block p-3">
+
+                <h3 class="heading"><a href="https://github.com/VivekShukla8/Aim-Arcade" target="_blank">Aim Arcade – Tournament Management Platform</a></h3>
+                <p>Full-stack tournament management platform used in real-world gaming tournaments for 2–3 weeks. Built with React, Node.js, and MongoDB featuring Google OAuth authentication, role-based access control, Razorpay payment integration, and scalable REST APIs supporting secure participant and payment workflows.</p>
+                <div class="tech-stack">
+                  <span class="tech-stack-label">Tech Stack:</span>
+                  <span class="tech-icon" title="React">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                  </span>
+                  <span class="tech-icon" title="Node.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                  </span>
+                  <span class="tech-icon" title="Express.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+                  </span>
+                  <span class="tech-icon" title="MongoDB">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                  </span>
+                  <span class="tech-icon" title="Google OAuth">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google OAuth">
+                  </span>
+                  <span class="tech-icon" title="Razorpay">
+                    <img src="https://avatars.githubusercontent.com/u/7713209?s=280&v=4" alt="Razorpay">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Chandigarh, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9424938202</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-2 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center mt-3">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vivekshukla8823@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1ldKgCOtr-QhnPGtjqRYD6ImzbdH9PHYm/view?usp=sharing" target="_blank">Resume Link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+        <br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Ready to <span>Collaborate?</span></h2>
+              <p class="mb-4">Whether you have a project in mind or just want to chat about tech, I'd love to hear from you.</p>
+              <div class="mt-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0Zdwf8ueR544kMri9_fZumNK11XoNbh-TKuts_b7c6spekQ/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">Send a Message</a>
+              </div>
+            </div>
+          </div>
+        <br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-12 text-center">
+
+        <!-- CONNECT WITH ME (FIXED LOCATION) -->
+        <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-3">
+          <li class="ftco-animate normal-txt">Connect with me:</li>
+          <li class="ftco-animate">
+            <a href="https://www.linkedin.com/in/vivek-shukla-40b05a258/" target="_blank" rel="noopener">
+              <span class="icon-linkedin"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="https://github.com/VivekShukla8" target="_blank" rel="noopener">
+              <span class="icon-github"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="https://www.instagram.com/its_viv_vs/" target="_blank" rel="noopener">
+              <span class="icon-instagram"></span>
+            </a>
+          </li>
+        </ul>
+
+        <p>&copy; 2024 Vivek Shukla. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  
+  <!-- Lazy Loading Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.classList.add('loaded');
+              observer.unobserve(img);
+            }
+          });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+      } else {
+        lazyImages.forEach(img => img.classList.add('loaded'));
+      }
+    });
+  </script>
+    
+  </body>
+</html>
