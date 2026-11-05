@@ -1,5 +1,17 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  BarChart3,
+  Binary,
+  ChartColumnIncreasing,
+  ChartLine,
+  Database,
+  FileSpreadsheet,
+  GitBranch,
+  PawPrint,
+  Route,
+  Workflow,
+} from 'lucide-react';
 import { skills } from '../data/portfolio';
 import { useTheme } from '../context/ThemeContext';
 
@@ -10,6 +22,19 @@ const fadeUp = {
 
 const stagger = {
   visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const skillFallbackIcons = {
+  Zustand: PawPrint,
+  Recharts: BarChart3,
+  'Data Structures & Algorithms': Binary,
+  'System Design': Workflow,
+  DBMS: Database,
+  'REST API Design': Route,
+  Concurrency: GitBranch,
+  'Data Analysis': ChartColumnIncreasing,
+  'Data Visualization': ChartLine,
+  'CSV Data Pipelines': FileSpreadsheet,
 };
 
 export default function Skills() {
@@ -73,30 +98,38 @@ export default function Skills() {
         {/* Icons Grid */}
         <motion.div layout className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-8">
           <AnimatePresence mode="popLayout">
-            {filtered.map((skill) => (
-              <motion.div
-                key={skill.name}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col items-center gap-3 group cursor-default"
-              >
-                <div className="w-16 h-16 rounded-full bg-[var(--bg-card)] border border-[var(--border-color)] flex items-center justify-center group-hover:border-[var(--text-primary)] group-hover:scale-110 transition-all duration-300">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className={`w-8 h-8 object-contain ${
-                      skill.invertOnDark && isDark ? 'invert' : ''
-                    }`}
-                  />
-                </div>
-                <span className="font-mono text-[10px] tracking-[0.1em] text-[var(--text-muted)] group-hover:text-[var(--text-primary)] transition-colors text-center">
-                  {skill.name}
-                </span>
-              </motion.div>
-            ))}
+            {filtered.map((skill) => {
+              const FallbackIcon = skillFallbackIcons[skill.name];
+
+              return (
+                <motion.div
+                  key={skill.name}
+                  layout
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col items-center gap-3 group cursor-default"
+                >
+                  <div className="w-16 h-16 rounded-full bg-[var(--bg-card)] border border-[var(--border-color)] flex items-center justify-center group-hover:border-[var(--text-primary)] group-hover:scale-110 transition-all duration-300">
+                    {FallbackIcon ? (
+                      <FallbackIcon size={32} strokeWidth={1.7} className="text-[var(--text-primary)]" aria-hidden="true" />
+                    ) : (
+                      <img
+                        src={skill.icon}
+                        alt=""
+                        className={`w-8 h-8 object-contain ${
+                          skill.invertOnDark && isDark ? 'invert' : ''
+                        }`}
+                      />
+                    )}
+                  </div>
+                  <span className="font-mono text-[10px] tracking-[0.1em] text-[var(--text-muted)] group-hover:text-[var(--text-primary)] transition-colors text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </motion.div>
       </motion.div>

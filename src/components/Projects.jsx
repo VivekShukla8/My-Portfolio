@@ -12,6 +12,40 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
+function ApplyIOCover() {
+  return (
+    <div
+      role="img"
+      aria-label="ApplyIO project cover: AI-powered job portal with Gemini resume parsing and ATS scoring"
+      className="relative flex h-[220px] md:h-[300px] lg:h-[340px] items-center overflow-hidden bg-[#11111b]"
+    >
+      <div className="absolute -right-16 -top-28 h-72 w-72 rounded-full border border-violet-300/15 md:h-[28rem] md:w-[28rem]" />
+      <div className="absolute -right-4 -top-16 h-56 w-56 rounded-full border border-violet-300/10 md:h-80 md:w-80" />
+      <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-violet-500/10 to-transparent" />
+
+      <div className="relative z-10 flex h-full w-full flex-col justify-between px-6 py-6 md:px-12 md:py-10">
+        <div className="flex items-center justify-between gap-4">
+          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.22em] text-violet-200/80 uppercase">
+            AI Career Platform
+          </span>
+          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.18em] text-white/40 uppercase">
+            Project 03
+          </span>
+        </div>
+
+        <div>
+          <h3 className="font-heading text-5xl md:text-7xl font-extrabold tracking-tight text-white">
+            Apply<span className="text-violet-300">IO</span>
+          </h3>
+          <p className="mt-2 font-mono text-[9px] md:text-[11px] tracking-[0.16em] text-white/55 uppercase">
+            Gemini resume parsing · ATS scoring · Application tracking
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="py-16 md:py-24 border-t border-[var(--border-color)]">
@@ -118,12 +152,16 @@ export default function Projects() {
                 className="pl-0 md:pl-16 rounded-xl overflow-hidden bg-[var(--bg-secondary)] border border-[var(--border-color)]"
               >
                 <div className="overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-[220px] md:h-[300px] lg:h-[340px] object-cover object-top hover:scale-[1.03] transition-transform duration-700"
-                    loading="lazy"
-                  />
+                  {project.visual === 'applyio' ? (
+                    <ApplyIOCover />
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-[220px] md:h-[300px] lg:h-[340px] object-cover object-top hover:scale-[1.03] transition-transform duration-700"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               </motion.div>
             </motion.article>
