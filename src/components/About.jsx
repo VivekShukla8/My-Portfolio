@@ -52,6 +52,16 @@ export default function About() {
               ))}
             </div>
 
+            <motion.div
+              variants={fadeUp}
+              className="mt-6 flex items-center gap-3 border-l-2 border-[var(--text-primary)] pl-4"
+            >
+              <strong className="font-heading text-2xl font-bold text-[var(--text-primary)]">500+</strong>
+              <span className="text-sm leading-relaxed text-[var(--text-secondary)]">
+                DSA problems solved across LeetCode, GeeksforGeeks, and CodeStudio
+              </span>
+            </motion.div>
+
             {/* Skill Pills */}
             <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mt-6">
               {skillPills.map((skill) => (

@@ -28,7 +28,7 @@ function ApplyIOCover() {
           <span className="font-mono text-[9px] md:text-[11px] tracking-[0.22em] text-violet-200/80 uppercase">
             AI Career Platform
           </span>
-          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.18em] text-white/40 uppercase">
+          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.18em] text-white/70 uppercase">
             Project 03
           </span>
         </div>
@@ -37,9 +37,81 @@ function ApplyIOCover() {
           <h3 className="font-heading text-5xl md:text-7xl font-extrabold tracking-tight text-white">
             Apply<span className="text-violet-300">IO</span>
           </h3>
-          <p className="mt-2 font-mono text-[9px] md:text-[11px] tracking-[0.16em] text-white/55 uppercase">
+          <p className="mt-2 font-mono text-[9px] md:text-[11px] tracking-[0.16em] text-white/75 uppercase">
             Gemini resume parsing · ATS scoring · Application tracking
           </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const projectCovers = {
+  fleetlink: {
+    accent: '#a78bfa',
+    glow: 'rgba(139, 92, 246, 0.23)',
+    eyebrow: 'MULTI-VENDOR RENTAL PLATFORM',
+    summary: 'Vehicle rentals with safer booking and payment flows.',
+    features: ['Tiered pricing', 'Concurrency-safe bookings', 'Redis + async email'],
+  },
+  'aim-arcade': {
+    accent: '#fb923c',
+    glow: 'rgba(249, 115, 22, 0.22)',
+    eyebrow: 'TOURNAMENT MANAGEMENT',
+    summary: 'Tools for registrations, brackets, and tournament payouts.',
+    features: ['Bracket creation', 'Role-based access', 'Razorpay payments'],
+  },
+  skyhack: {
+    accent: '#60a5fa',
+    glow: 'rgba(59, 130, 246, 0.24)',
+    eyebrow: 'FLIGHT DIFFICULTY ANALYTICS',
+    summary: 'A weighted score turns flight operations data into trends.',
+    features: ['Six scoring factors', '8K+ CSV records', 'Operational analytics'],
+  },
+};
+
+function ProjectCover({ project }) {
+  const cover = projectCovers[project.visual];
+  if (!cover) return null;
+
+  return (
+    <div
+      role="img"
+      aria-label={`${project.title} project overview. ${cover.features.join(', ')}.`}
+      className="relative flex h-[220px] md:h-[300px] lg:h-[340px] flex-col justify-between overflow-hidden bg-[#101114] px-6 py-6 md:px-12 md:py-10"
+      style={{
+        backgroundImage: `radial-gradient(circle at 82% 18%, ${cover.glow}, transparent 34%), linear-gradient(140deg, #101114, #17191f 58%, #0b0c0e)`,
+      }}
+    >
+      <div
+        className="absolute inset-0 opacity-[0.12]"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+      />
+      <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full border border-white/10 md:h-96 md:w-96" />
+
+      <div className="relative z-10 flex items-center justify-between gap-4">
+        <span className="font-mono text-[9px] md:text-[11px] tracking-[0.22em] uppercase" style={{ color: cover.accent }}>
+          Project overview
+        </span>
+        <span className="font-mono text-[9px] md:text-[11px] tracking-[0.18em] text-white/70 uppercase">
+          {cover.eyebrow}
+        </span>
+      </div>
+
+      <div className="relative z-10">
+        <h3 className="font-heading text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+          {project.title}
+        </h3>
+        <p className="mt-2 max-w-2xl text-sm md:text-base text-white/65">{cover.summary}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {cover.features.map((feature) => (
+            <span key={feature} className="rounded-full border border-white/15 bg-black/20 px-3 py-1.5 font-mono text-[9px] md:text-[10px] tracking-[0.08em] text-white/75">
+              {feature}
+            </span>
+          ))}
         </div>
       </div>
     </div>
@@ -154,6 +226,8 @@ export default function Projects() {
                 <div className="overflow-hidden">
                   {project.visual === 'applyio' ? (
                     <ApplyIOCover />
+                  ) : project.visual ? (
+                    <ProjectCover project={project} />
                   ) : (
                     <img
                       src={project.image}

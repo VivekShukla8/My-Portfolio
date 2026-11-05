@@ -40,7 +40,11 @@ export default function Resume() {
                   {job.role}
                 </h4>
                 <p className="text-[var(--text-secondary)] text-sm mb-3">{job.org}</p>
-                <p className="text-[var(--text-secondary)] text-sm leading-relaxed">{job.details}</p>
+                <ul className="mt-4 space-y-2 pl-5 text-sm leading-relaxed text-[var(--text-secondary)] list-disc marker:text-[var(--text-muted)]">
+                  {job.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

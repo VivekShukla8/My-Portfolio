@@ -1,16 +1,13 @@
 // All portfolio content in one place — easy to update
 import portrait from '../../images/about-portrait.png';
-import fleetImg from '../../images/FleetLink.png';
 import streamImg from '../../images/Stream.png';
-import aimImg from '../../images/Aim-Arcade.png';
-import skyImg from '../../images/United.png';
 
 export const personalInfo = {
   name: 'Vivek',
   lastName: 'Shukla',
   fullName: 'Vivek Shukla',
   role: 'Full-Stack Developer',
-  tagline: 'Full-stack developer building React and Node.js products with SQL, Redis, and the rest of a production stack.',
+  tagline: 'Full-stack developer building React and Node.js products with MongoDB, SQL, and Redis.',
   email: 'vivekshukla8823@gmail.com',
   phone: '+91 9424938202',
   location: 'Pune, India',
@@ -29,13 +26,13 @@ export const personalInfo = {
 
 export const aboutText = [
   'I build full-stack products with React.js, Node.js, MySQL, and MongoDB, from responsive interfaces to secure APIs and data-heavy workflows.',
-  "My work spans FleetLink, Stream-Vault, ApplyIO, Aim Arcade, and SkyHack. I also interned at Atlas Copco on technical energy analysis and have solved 500+ DSA problems, mostly in C++.",
+  "My work spans FleetLink, Stream-Vault, ApplyIO, Aim Arcade, and SkyHack. I also interned at Atlas Copco on technical energy analysis.",
 ];
 
 export const quickInfo = [
   { label: 'Based in', value: 'Pune, India' },
   { label: 'Email', value: 'vivekshukla8823@gmail.com' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/vivek-shukla', url: 'https://www.linkedin.com/in/vivek-shukla-40b05a258/' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/vivek-shukla-40b05a258', url: 'https://www.linkedin.com/in/vivek-shukla-40b05a258/' },
   { label: 'GitHub', value: 'github.com/VivekShukla8', url: 'https://github.com/VivekShukla8' },
 ];
 
@@ -80,7 +77,7 @@ export const projects = [
     title: 'FleetLink',
     subtitle: 'Multi-Vendor Vehicle Rental',
     description: 'Multi-vendor rental platform with tiered pricing and store isolation. Built concurrency-safe bookings with row locks, reserve-then-pay, and Razorpay webhook checks, plus Redis caching, a RabbitMQ email worker, and Clerk role and ownership checks.',
-    image: fleetImg,
+    visual: 'fleetlink',
     liveUrl: 'https://fleetlink-vivek-olive.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/FleetLink',
     tech: ['React', 'Node.js', 'Express', 'MySQL', 'Prisma', 'Redis', 'RabbitMQ', 'Razorpay', 'Docker'],
@@ -112,7 +109,7 @@ export const projects = [
     title: 'Aim Arcade',
     subtitle: 'Tournament Management Platform',
     description: 'Tournament platform used at live events for 2–3 weeks. Supports bracket creation, registration, and payouts, with Google OAuth, role-based access, and Razorpay payments.',
-    image: aimImg,
+    visual: 'aim-arcade',
     liveUrl: 'https://aim-arcade-blun.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/Aim-Arcade',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Google OAuth', 'Razorpay'],
@@ -123,8 +120,8 @@ export const projects = [
     title: 'SkyHack',
     subtitle: 'Flight Difficulty Analytics',
     description: 'Aviation dashboard that scores flight difficulty across six parameters and visualizes operational trends. Processes 8K+ records through CSV pipelines with a MERN stack, Recharts, and Ant Design.',
-    image: skyImg,
-    liveUrl: 'https://skyhack-n4erzzbx8-vivek-shuklas-projects-8ebbc1b2.vercel.app/',
+    visual: 'skyhack',
+    liveUrl: 'https://skyhack-ua.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/SkyHack_3.0_UA',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Recharts', 'Ant Design'],
     featured: true,
@@ -151,9 +148,13 @@ export const education = [
 export const experience = [
   {
     period: 'Feb 2025 — Jul 2025',
-    role: 'Technical Analysis Intern',
+    role: 'Technical Sales Intern',
     org: 'Atlas Copco India Pvt. Ltd · Hybrid',
-    details: 'On-site energy studies at 5 client facilities, with savings scenarios of about Rs. 1 crore a year. Wrote the technical report and ran client communication for the 5-month engagement.',
+    highlights: [
+      'Visited five client plants to evaluate compressor performance and identify replacement opportunities; used Excel to organize findings and compare options.',
+      'Compared replacing multiple 40–45 kW compressors with a single high-efficiency unit, projecting about ₹1 crore in potential annual energy savings across client sites.',
+      'Prepared the technical project report and worked with sales and technical teams on client discussions and solution design.',
+    ],
   },
 ];
 

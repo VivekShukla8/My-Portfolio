@@ -14,9 +14,9 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } },
 };
 
-const techPills = ['REACT', 'NODE.JS', 'MYSQL', 'DOCKER'];
+const techPills = ['REACT', 'NODE.JS', 'MONGODB', 'MYSQL', 'REDIS'];
 
-export default function Hero() {
+export default function Hero({ isHomeActive = true }) {
   return (
     <section id="home" className="relative overflow-x-clip pt-24 pb-12 md:pb-14">
       <motion.div
@@ -109,26 +109,28 @@ export default function Hero() {
         </div>
 
         {/* Bottom Strip */}
-        <motion.div
-          variants={item}
-          className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mt-12 md:mt-14 pt-5 border-t border-[var(--border-color)]"
-        >
-          <span className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase mb-3 sm:mb-0">
-            Design &amp; Code by {personalInfo.name}
-          </span>
-
-          <span className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase hidden sm:block">
-            {new Date().getFullYear()} Portfolio
-          </span>
-
-          <a
-            href="/projects"
-            className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-2 group"
+        {isHomeActive && (
+          <motion.div
+            variants={item}
+            className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mt-12 md:mt-14 pt-5 border-t border-[var(--border-color)]"
           >
-            Selected Work
-            <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
-          </a>
-        </motion.div>
+            <span className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase mb-3 sm:mb-0">
+              Design &amp; Code by {personalInfo.name}
+            </span>
+
+            <span className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase hidden sm:block">
+              {new Date().getFullYear()} Portfolio
+            </span>
+
+            <a
+              href="/projects"
+              className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-2 group"
+            >
+              Selected Work
+              <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
+            </a>
+          </motion.div>
+        )}
       </motion.div>
     </section>
   );

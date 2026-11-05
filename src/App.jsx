@@ -170,7 +170,7 @@ export default function App() {
       className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-[var(--transition-speed)]"
     >
       <Navbar activeSection={activeSection} />
-      <Hero />
+      <Hero isHomeActive={activeSection === 'home'} />
       <About />
       <Projects />
       <Skills />

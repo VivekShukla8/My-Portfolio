@@ -23,8 +23,8 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [notice, setNotice] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const subject = `Portfolio message from ${form.name}`;
     const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`;
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalInfo.email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -33,8 +33,8 @@ export default function Contact() {
     setNotice('Gmail should open with this draft. Press Send there to deliver it.');
   };
 
-  const handleChange = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (event) => {
+    setForm((previous) => ({ ...previous, [event.target.name]: event.target.value }));
   };
 
   return (
@@ -112,10 +112,11 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6 w-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <div>
-                  <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
+                  <label htmlFor="contact-name" className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
                     Name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     value={form.name}
@@ -126,10 +127,11 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
+                  <label htmlFor="contact-email" className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
                     Email
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     name="email"
                     value={form.email}
@@ -142,10 +144,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
+                <label htmlFor="contact-message" className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)] block mb-4">
                   Message
                 </label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   value={form.message}
                   onChange={handleChange}
@@ -158,7 +161,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] border border-[var(--border-color)] rounded-full px-6 py-3.5 text-[var(--text-secondary)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:border-[var(--text-primary)] transition-all duration-300 disabled:opacity-50"
+                className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] border border-[var(--border-color)] rounded-full px-6 py-3.5 text-[var(--text-secondary)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:border-[var(--text-primary)] transition-all duration-300"
               >
                 Open Gmail <ArrowRight size={14} />
               </button>

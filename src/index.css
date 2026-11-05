@@ -10,7 +10,7 @@
   --bg-card: #ffffff;
   --text-primary: #1a1a1a;
   --text-secondary: #555555;
-  --text-muted: #888888;
+  --text-muted: #6f6862;
   --border-color: rgba(0, 0, 0, 0.1);
   --accent: #1a1a1a;
   --transition-speed: 0.4s;
@@ -22,7 +22,7 @@
   --bg-card: #161616;
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
-  --text-muted: #666666;
+  --text-muted: #858585;
   --border-color: rgba(255, 255, 255, 0.1);
   --accent: #ffffff;
 }
