@@ -1,5 +1,5 @@
 // All portfolio content in one place — easy to update
-import portrait from '../../images/about.jpeg';
+import portrait from '../../images/about-portrait.png';
 import fleetImg from '../../images/FleetLink.png';
 import streamImg from '../../images/Stream.png';
 import aimImg from '../../images/Aim-Arcade.png';
@@ -152,11 +152,11 @@ export const experience = [
 ];
 
 export const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Resume', href: '#resume' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/home' },
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Skills', href: '/skills' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Contact', href: '/contact' },
 ];
 

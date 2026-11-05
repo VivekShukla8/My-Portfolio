@@ -122,7 +122,7 @@ export default function Hero() {
           </span>
 
           <a
-            href="#projects"
+            href="/projects"
             className="font-mono text-[10px] tracking-[0.2em] text-[var(--text-muted)] uppercase hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-2 group"
           >
             Selected Work

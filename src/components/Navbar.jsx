@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 import { useTheme } from '../context/ThemeContext';
 import { navLinks, personalInfo } from '../data/portfolio';
 
-export default function Navbar() {
+export default function Navbar({ activeSection }) {
   const { isDark, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a
-          href="#home"
+          href="/home"
           className="font-heading font-extrabold text-xl tracking-tight text-[var(--text-primary)]"
         >
           V.S.
@@ -44,7 +44,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono uppercase text-[11px] tracking-[0.2em] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+              aria-current={activeSection === link.href.slice(1) ? 'page' : undefined}
+              className={`font-mono uppercase text-[11px] tracking-[0.2em] hover:text-[var(--text-primary)] transition-colors duration-300 ${
+                activeSection === link.href.slice(1) ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'
+              }`}
             >
               {link.label}
             </a>
@@ -116,7 +119,10 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="font-mono uppercase text-sm tracking-[0.3em] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                  aria-current={activeSection === link.href.slice(1) ? 'page' : undefined}
+                  className={`font-mono uppercase text-sm tracking-[0.3em] hover:text-[var(--text-primary)] transition-colors ${
+                    activeSection === link.href.slice(1) ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'
+                  }`}
                 >
                   {link.label}
                 </motion.a>
