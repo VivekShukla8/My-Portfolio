@@ -1,4 +1,9 @@
 // All portfolio content in one place — easy to update
+import portrait from '../../images/about.jpeg';
+import fleetImg from '../../images/FleetLink.png';
+import streamImg from '../../images/Stream.png';
+import aimImg from '../../images/Aim-Arcade.png';
+import skyImg from '../../images/United.png';
 
 export const personalInfo = {
   name: 'Vivek',
@@ -13,6 +18,7 @@ export const personalInfo = {
   degree: 'B.Tech — Electrical Engineering',
   yearRange: '2022–2026',
   resumeUrl: 'https://drive.google.com/file/d/1MOztmd2p2iMHpFhFQ3v8Bzlg93Zaljx0/view?usp=drive_link',
+  photo: portrait,
   status: 'Open for work',
   links: {
     linkedin: 'https://www.linkedin.com/in/vivek-shukla-40b05a258/',
@@ -68,7 +74,7 @@ export const projects = [
     title: 'FleetLink',
     subtitle: 'Multi-Vendor Vehicle Rental',
     description: 'Multi-vendor vehicle rental platform with a Prisma/MySQL schema for tiered pricing, price snapshots, refundable deposits, and store isolation. Built a concurrency-safe booking engine with row locking, a reserve-then-pay hold, and Razorpay webhook checks, plus Redis caching and a RabbitMQ email worker. Auth runs through Clerk with role and ownership checks, and the stack is containerized with Docker Compose.',
-    image: '/images/FleetLink.png',
+    image: fleetImg,
     liveUrl: 'https://fleetlink-vivek-olive.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/FleetLink',
     tech: ['React', 'Node.js', 'Express', 'MySQL', 'Prisma', 'Redis', 'RabbitMQ', 'Razorpay', 'Docker'],
@@ -79,7 +85,7 @@ export const projects = [
     title: 'Stream-Vault',
     subtitle: 'Video Streaming Platform',
     description: 'Full-stack video platform with a custom player, Cloudinary uploads through signed URLs, and a React + Tailwind UI. 35+ REST endpoints cover videos, playlists, comments, search, and Socket.io messaging, secured with JWT and bcrypt. Watch history, analytics, and search run on MongoDB aggregation pipelines, with frontend state in Zustand.',
-    image: '/images/Stream.png',
+    image: streamImg,
     liveUrl: 'https://stream-vault-frontend1.vercel.app/#/',
     githubUrl: 'https://github.com/VivekShukla8/StreamVault-Frontend',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'Cloudinary', 'Zustand', 'JWT'],
@@ -100,7 +106,7 @@ export const projects = [
     title: 'Aim Arcade',
     subtitle: 'Tournament Management Platform',
     description: 'Tournament platform used in real gaming events for 2–3 weeks. Built with React, Node.js, and MongoDB, with Google OAuth, role-based access, Razorpay payments, and REST APIs for brackets, registrations, and payouts.',
-    image: '/images/Aim-Arcade.png',
+    image: aimImg,
     liveUrl: 'https://aim-arcade-blun.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/Aim-Arcade',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Google OAuth', 'Razorpay'],
@@ -111,7 +117,7 @@ export const projects = [
     title: 'SkyHack',
     subtitle: 'Flight Difficulty Analytics',
     description: 'Aviation analytics dashboard for operational decisions. A weighted score across six flight parameters ranks difficulty in real time, with a MERN interface in Recharts and Ant Design that processes 8K+ records through CSV pipelines.',
-    image: '/images/United.png',
+    image: skyImg,
     liveUrl: 'https://skyhack-n4erzzbx8-vivek-shuklas-projects-8ebbc1b2.vercel.app/',
     githubUrl: 'https://github.com/VivekShukla8/SkyHack_3.0_UA',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Recharts', 'Ant Design'],

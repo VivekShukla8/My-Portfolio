@@ -90,7 +90,7 @@ export default function Hero() {
               className="w-full max-w-[260px] lg:max-w-[240px] aspect-[3/4] rounded-xl overflow-hidden"
             >
               <img
-                src="/images/about.jpeg"
+                src={personalInfo.photo}
                 alt={personalInfo.fullName}
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
