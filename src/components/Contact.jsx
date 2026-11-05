@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, ArrowRight, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { LinkedinIcon, GithubIcon, InstagramIcon } from './Icons';
 import { personalInfo } from '../data/portfolio';
 
@@ -21,28 +21,16 @@ const socialLinks = [
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
+  const [notice, setNotice] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSending(true);
-    try {
-      const res = await fetch('https://formspree.io/f/placeholder', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setSent(true);
-        setForm({ name: '', email: '', message: '' });
-      }
-    } catch {
-      setSent(true);
-      setForm({ name: '', email: '', message: '' });
-    }
-    setSending(false);
-    setTimeout(() => setSent(false), 5000);
+    const subject = `Portfolio message from ${form.name}`;
+    const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`;
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalInfo.email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer');
+    setNotice('Gmail should open with this draft. Press Send there to deliver it.');
   };
 
   const handleChange = (e) => {
@@ -170,21 +158,15 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={sending}
                 className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] border border-[var(--border-color)] rounded-full px-6 py-3.5 text-[var(--text-secondary)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:border-[var(--text-primary)] transition-all duration-300 disabled:opacity-50"
               >
-                {sent ? (
-                  <>
-                    Message Sent <Check size={14} />
-                  </>
-                ) : sending ? (
-                  'Sending...'
-                ) : (
-                  <>
-                    Send Message <ArrowRight size={14} />
-                  </>
-                )}
+                Open Gmail <ArrowRight size={14} />
               </button>
+              {notice && (
+                <p role="status" aria-live="polite" className="font-mono text-xs text-[var(--text-muted)]">
+                  {notice}
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
